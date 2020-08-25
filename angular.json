@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "todos-angular-app2"
+    }
+  },
+  "defaultProject": "todos-angular-app2",
+  "cli": {
+    "analytics": false
+  }
 }
