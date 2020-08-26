@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Page1Component } from './page1/page1.component';
-import { Page2Component } from './page2/page2.component';
+import { TodosListComponent } from './todos/todos-list/todos-list.component';
+import { AddEditTodoComponent } from './todos/add-edit-todo/add-edit-todo.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: 'page1', component: Page1Component },
-  { path: 'page2', component: Page2Component }
+  { path: 'todos', component: TodosListComponent },
+  { path: 'add-edit', component: AddEditTodoComponent },
+
+  { path: '', redirectTo: 'todos', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
